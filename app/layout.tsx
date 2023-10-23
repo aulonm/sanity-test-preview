@@ -1,6 +1,8 @@
 import 'tailwindcss/tailwind.css'
 
 import { IBM_Plex_Mono, Inter, PT_Serif } from 'next/font/google'
+import { draftMode } from 'next/headers'
+import PreviewProvider from 'components/preview/PreviewProvider'
 
 const serif = PT_Serif({
   variable: '--font-serif',
@@ -25,12 +27,24 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const { isEnabled } = draftMode()
+
+  console.log(isEnabled)
+
   return (
     <html
       lang="en"
       className={`${mono.variable} ${sans.variable} ${serif.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {isEnabled ? (
+          <PreviewProvider token={process.env.SANITY_API_READ_TOKEN!}>
+            {children}
+          </PreviewProvider>
+        ) : (
+          children
+        )}
+      </body>
     </html>
   )
 }

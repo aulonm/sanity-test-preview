@@ -1,0 +1,17 @@
+project: studio
+
+carry_env: true
+
+providers:
+  azure_keyvault:
+    env:
+      SANITY_STUDIO_API_DATASET:
+        path: Sanity-Dataset
+      SANITY_STUDIO_API_PROJECT_ID:
+        path: Sanity-ProjectId
+      SANITY_STUDIO_PREVIEW_SECRET:
+        path: Sanity-PreviewSecret
+      SANITY_STUDIO_APP_URL:
+        path: Frontend-AppUrl
+      SANITY_STUDIO_APP_URL_SE:
+        path: Frontend-AppUrl-Se

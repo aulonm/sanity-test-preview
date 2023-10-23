@@ -1,0 +1,48 @@
+{
+  "name": "obos",
+  "private": true,
+  "version": "1.0.0",
+  "main": "package.json",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "start": "sanity start",
+    "lint": "eslint . --fix --ext \"js,cjs,mjs,tsx,ts\"",
+    "lint:fix": "eslint . --fix --ext \"js,cjs,mjs,tsx,ts\"",
+    "format": "prettier --list-different --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/client": "6.4.12",
+    "@sanity/icons": "2.5.0",
+    "@sanity/scheduled-publishing": "1.2.0",
+    "@sanity/ui": "1.8.2",
+    "@sanity/vision": "3.17.0",
+    "date-fns": "2.30.0",
+    "get-youtube-id": "1.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "4.11.0",
+    "react-is": "18.2.0",
+    "react-youtube": "10.1.0",
+    "sanity": "3.17.0",
+    "sanity-plugin-cloudinary": "1.1.1",
+    "sanity-plugin-iframe-pane": "2.5.8",
+    "styled-components": "5.3.11"
+  },
+  "devDependencies": {
+    "@sanity/cli": "3.17.0",
+    "@sanity/eslint-config-studio": "3.0.1",
+    "@types/react": "18.2.25",
+    "@types/styled-components": "5.1.28",
+    "eslint": "8.51.0",
+    "nanoid": "5.0.1",
+    "prettier": "3.0.3",
+    "typescript": "5.2.2"
+  }
+}
