@@ -15,8 +15,6 @@ export interface OBOSNewspaper {
 export default async function OBOSNewspaper({ data }: { data: OBOSNewspaper }) {
   const { hero } = data ?? {}
 
-  console.log(hero)
-
   return (
     <>
       <div className="container mb-16 flex flex-col gap-20 md:gap-36 max-md:p-0">

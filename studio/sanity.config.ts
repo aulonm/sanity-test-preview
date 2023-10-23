@@ -10,7 +10,6 @@ import settings from './schemas/singletons/settings';
 import Iframe from 'sanity-plugin-iframe-pane';
 import { resolveProductionUrl } from './plugins/resolveProductionUrl';
 import project from './schemas/documents/project';
-import page from './schemas/documents/page';
 
 const devOnlyPlugins = [visionTool()];
 
