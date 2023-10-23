@@ -1,8 +1,8 @@
 import 'tailwindcss/tailwind.css'
 
+import dynamic from 'next/dynamic'
 import { IBM_Plex_Mono, Inter, PT_Serif } from 'next/font/google'
 import { draftMode } from 'next/headers'
-import PreviewProvider from 'components/preview/PreviewProvider'
 
 const serif = PT_Serif({
   variable: '--font-serif',
@@ -22,14 +22,16 @@ const mono = IBM_Plex_Mono({
   weight: ['500', '700'],
 })
 
+const PreviewProvider = dynamic(
+  () => import('../components/preview/PreviewProvider'),
+)
+
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   const { isEnabled } = draftMode()
-
-  console.log(isEnabled)
 
   return (
     <html

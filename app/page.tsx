@@ -3,9 +3,9 @@ import { draftMode } from 'next/headers'
 import { groq } from 'next-sanity'
 import { LiveQuery } from 'next-sanity/preview/live-query'
 
-import { OBOSNewspaper as IOBOSNewspaper } from '../../components/pages/obos/OBOSNewspaper'
-import OBOSNewspaper from '../../components/pages/obos/OBOSNewspaper'
-import PreviewOBOSNewspaper from '../../components/pages/obos/PreviewOBOSNewspaper'
+import { OBOSNewspaper as IOBOSNewspaper } from '../components/pages/obos/OBOSNewspaper'
+import OBOSNewspaper from '../components/pages/obos/OBOSNewspaper'
+import PreviewOBOSNewspaper from '../components/pages/obos/PreviewOBOSNewspaper'
 
 const query = groq`
   *[_type == "home"][0]{
@@ -21,8 +21,6 @@ export default async function ObosBladet() {
   const data = await sanityFetch<IOBOSNewspaper>({
     query,
   })
-
-  console.log(data)
 
   return (
     <LiveQuery

@@ -40,8 +40,6 @@ export async function sanityFetch<QueryResponse>({
     )
   }
 
-  console.log(isDraftMode)
-
   // @TODO this won't be necessary after https://github.com/sanity-io/client/pull/299 lands
   const sanityClient =
     client.config().useCdn && isDraftMode
