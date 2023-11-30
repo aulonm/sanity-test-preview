@@ -63,7 +63,7 @@ export default defineConfig([
     dataset,
     plugins: [
       deskTool({
-        structure: pageStructure([home, settings]),
+        structure: pageStructure([home]),
         defaultDocumentNode: (S, context) => defaultDocumentNode(S, context),
       }),
       ...plugins,

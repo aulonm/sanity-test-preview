@@ -60,13 +60,8 @@ export const pageStructure = (typeDefArray: DocumentDefinition[]): StructureReso
         );
     });
 
-    // The default root list items (except custom ones)
-    const defaultListItems = S.documentTypeListItems().filter(
-      (listItem) => !typeDefArray.find((singleton) => singleton.name === listItem.getId()),
-    );
-
     return S.list()
       .title('Content')
-      .items([...singletonItems, S.divider(), ...defaultListItems]);
+      .items([...singletonItems, S.divider()]);
   };
 };
