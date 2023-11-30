@@ -12,7 +12,7 @@ export interface OBOSNewspaper {
   }
 }
 
-export default async function OBOSNewspaper({ data }: { data: OBOSNewspaper }) {
+export default function OBOSNewspaper({ data }: { data: OBOSNewspaper }) {
   const { hero } = data ?? {}
 
   return (
